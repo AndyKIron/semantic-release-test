@@ -1,4 +1,5 @@
 {
+    "branch": "master",
     "plugins": [
         [
             "@semantic-release/commit-analyzer",
@@ -9,8 +10,7 @@
         [
             "@semantic-release/release-notes-generator",
             {
-                "preset": "angular",
-                "generateNotes": true
+                "preset": "angular"
             }
         ],
         [
@@ -31,9 +31,5 @@
         {
             "npmPublish": false
         }
-    ],
-    "branches": [
-        "master",
-        "release"
     ]
 }

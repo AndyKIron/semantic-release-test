@@ -5,8 +5,10 @@
   "main": "index.js",
   "author": "andy.kono@hgmail.com",
   "license": "ISC",
+  "private": true,
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "semantic-release": "^18.0.0"
   },
   "config": {
     "commitizen": {

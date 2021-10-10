@@ -4,20 +4,5 @@
   "description": "just for testing",
   "main": "index.js",
   "author": "andy.kono@hgmail.com",
-  "license": "ISC",
-  "scripts": {
-    "commit": "git-cz"
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/prompt"
-    }
-  },
-  "devDependencies": {
-    "@commitlint/config-conventional": "^13.2.0",
-    "@commitlint/prompt": "^13.2.1",
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
-    "semantic-release": "^18.0.0"
-  }
+  "license": "ISC"
 }

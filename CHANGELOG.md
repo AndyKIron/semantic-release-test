@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/AndyKIron/semantic-release-test/compare/v2.1.0...v3.0.0) (2021-10-10)
+
+
+### Bug Fixes
+
+* some ([58de609](https://github.com/AndyKIron/semantic-release-test/commit/58de609d8188a15b9191dff9b4d58ca894a94a8e))
+
+
+### BREAKING CHANGES
+
+* sdsdsd sds sd sds dss s sdsd
+
 # [2.1.0](https://github.com/AndyKIron/semantic-release-test/compare/v2.0.2...v2.1.0) (2021-10-10)
 
 

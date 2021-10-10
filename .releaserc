@@ -1,6 +1,19 @@
 {
-    "branches": [
-        "master",
-        "release"
-    ]
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/npm",
+        {
+            "verifyConditions": false,
+            "prepare": false,
+            "publish": false    
+        },
+        "@semantic-release/changelog",
+        {
+            "verifyConditions": false,
+            "prepare": false
+        },
+        "@semantic-release/git"
+    ],
+    "preset": "angular"
 }

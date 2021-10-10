@@ -3,12 +3,22 @@
   "version": "1.0.0",
   "description": "just for testing",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "andy.kono@hgmail.com",
   "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  },
   "devDependencies": {
+    "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/prompt": "^13.2.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "semantic-release": "^18.0.0"
   }
 }

@@ -1,19 +1,16 @@
 {
-    "plugins": [
+    "plugins": [        
         "@semantic-release/commit-analyzer",
+        "@semantic-release/changelog",
         "@semantic-release/release-notes-generator",
+        "@semantic-release/github",
         "@semantic-release/npm",
         {
-            "verifyConditions": false,
-            "prepare": false,
-            "publish": false    
-        },
-        "@semantic-release/changelog",
-        {
-            "verifyConditions": false,
-            "prepare": false
-        },
-        "@semantic-release/git"
+            "npmPublish": false
+        }        
     ],
-    "preset": "angular"
+    "branches": [
+        "master",
+        "release"
+    ]
 }

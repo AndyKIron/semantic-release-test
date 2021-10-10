@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/AndyKIron/semantic-release-test/compare/v3.0.0...v3.1.0) (2021-10-10)
+
+
+### Features
+
+* add new ([35a14c1](https://github.com/AndyKIron/semantic-release-test/commit/35a14c14d1bb81258fe89bb39f0f84c07d96a202))
+
 # [3.0.0](https://github.com/AndyKIron/semantic-release-test/compare/v2.1.0...v3.0.0) (2021-10-10)
 
 

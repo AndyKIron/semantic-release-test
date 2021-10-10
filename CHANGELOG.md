@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/AndyKIron/semantic-release-test/compare/v3.1.0...v3.2.0) (2021-10-10)
+
+
+### Features
+
+* changes in config ([d4f0f8d](https://github.com/AndyKIron/semantic-release-test/commit/d4f0f8d9f2ffa00be3ac775011b8d9c04ce41185))
+
 # [3.1.0](https://github.com/AndyKIron/semantic-release-test/compare/v3.0.0...v3.1.0) (2021-10-10)
 
 

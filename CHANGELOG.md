@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/AndyKIron/semantic-release-test/compare/v2.0.2...v2.1.0) (2021-10-10)
+
+
+### Features
+
+* new new feature ([#2](https://github.com/AndyKIron/semantic-release-test/issues/2) oppa) ([e454367](https://github.com/AndyKIron/semantic-release-test/commit/e4543677dca1de917394ac25f0a6988eae02b889))
+
 ## [2.0.2](https://github.com/AndyKIron/semantic-release-test/compare/v2.0.1...v2.0.2) (2021-10-10)
 
 

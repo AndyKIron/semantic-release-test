@@ -4,7 +4,3 @@
 ### Bug Fixes
 
 * fixes for some ([409aa4c](https://github.com/AndyKIron/semantic-release-test/commit/409aa4ca4950a55ca09b72bfc4afd7be43df293e))
-
-# Changelog
-
-All notable changes to this project will be documented in this file.

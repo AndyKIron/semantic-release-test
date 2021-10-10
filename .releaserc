@@ -19,6 +19,7 @@
                 "changelogFile": "CHANGELOG.md"
             }
         ],
+        "@semantic-release/npm",
         [
             "@semantic-release/git",
             {
@@ -27,9 +28,6 @@
                 ]
             }
         ],
-        "@semantic-release/npm",
-        {
-            "npmPublish": false
-        }
+        "@semantic-release/github"    
     ]
 }

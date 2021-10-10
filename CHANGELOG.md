@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/AndyKIron/semantic-release-test/compare/v3.3.0...v3.3.1) (2021-10-10)
+
+
+### Bug Fixes
+
+* bugfix in dropdown ([eedfdd3](https://github.com/AndyKIron/semantic-release-test/commit/eedfdd3032b92fb8b65aa1b9409ac8d066a4e4da))
+
 # [3.3.0](https://github.com/AndyKIron/semantic-release-test/compare/v3.2.0...v3.3.0) (2021-10-10)
 
 

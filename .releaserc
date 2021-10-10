@@ -1,7 +1,18 @@
 {
     "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator",
+        [
+            "@semantic-release/commit-analyzer",
+            {
+                "preset": "angular"
+            }
+        ],
+        [
+            "@semantic-release/release-notes-generator",
+            {
+                "preset": "angular",
+                "generateNotes": true
+            }
+        ],
         [
             "@semantic-release/changelog",
             {

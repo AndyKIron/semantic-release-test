@@ -20,7 +20,7 @@ jobs:
       - name: On Code validate DONE succesfull
         if: github.event.action == 'code-validate-done'
         run: |
-          echo "code-validate done with '${{ parseJSON(github.event) }}'" && \
+          echo "code-validate done with" && \
           curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
@@ -33,7 +33,7 @@ jobs:
 # ===== PUBLISH
       - name: On Publish validate DONE
         if: github.event.action == 'publish-done'
-        run: echo "code-validate done with '${{ parseJSON(github.event) }}'"
+        run: echo "code-validate done with '${{ github.event }}'"
 
       - name: On Publish validate FAILED
         if: github.event.action == 'publish-failed'

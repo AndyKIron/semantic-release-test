@@ -28,14 +28,14 @@ jobs:
           --data '{"event_type": "publish", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "ref": "${{ github.ref }}" }}'
 
       - name: On Code validate FAILED
-        if: github.event.action == 'code-validate-done' && github.event.result != 'ok'
+        if: github.event.action == 'code-validate-done' && github.event.client_payload.result != 'ok'
         run: echo "code-validate done with '${{ github.event.result }}'"
 
 # ===== PUBLISH
       - name: On Publish validate DONE
-        if: github.event.action == 'code-validate-done' && github.event.result == 'ok'
+        if: github.event.action == 'code-validate-done' && github.event.client_payload.result == 'ok'
         run: echo "code-validate done with '${{ github.event.result }}'"
 
       - name: On Publish validate FAILED
-        if: github.event.action == 'code-validate-done' && github.event.result == 'failed'
+        if: github.event.action == 'code-validate-done' && github.event.client_payload.result == 'failed'
         run: echo "code-validate failed with '${{ github.event.result }}'"

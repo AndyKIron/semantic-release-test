@@ -5,7 +5,7 @@ on:
   repository_dispatch:
 
 jobs:
-  callCodeValidate:
+  startCI:
     runs-on: ubuntu-latest
     steps:
 # ===== CODE-VALIDATE
@@ -30,9 +30,6 @@ jobs:
         if: github.event.action == 'code-validate-failed'
         run: echo "code-validate failed"
 
-  callPublish:
-    runs-on: ubuntu-latest
-    steps:
 # ===== PUBLISH
       - name: On Publish validate DONE
         if: github.event.action == 'publish-done'

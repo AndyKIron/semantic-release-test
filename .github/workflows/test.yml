@@ -9,10 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-    - run: |
-      curl \
-      -X POST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" \
-      -H "Accept: application/vnd.github.v3+json" \
-      -H "Content-Type: application/json" \
-      https://api.github.com/repos/YOURNAME/APPLICATION_NAME/dispatches \
-      --data '{"event_type": "build_application"}'
+      - run: |
+        curl \
+        -X POST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Content-Type: application/json" \
+        https://api.github.com/repos/YOURNAME/APPLICATION_NAME/dispatches \
+        --data '{"event_type": "build_application"}'

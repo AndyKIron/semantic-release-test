@@ -7,18 +7,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-#      - uses: actions/checkout@v2
-
-      - name: Test
-        run: echo "TEST-TSES"
-
       - name: Emit repository dispatch event
-        run: |
-          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
-          -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
-          --data '{"event_type": "ping"}'
-
+        run: echo "${{github.event.action}}"
 #        run: |
-#        curl -XPOST -u "${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.v3+json" -H "Content-Type: application/json" https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches
-#        --data '{"event_type": "build_application"}'
+#          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
+#          -H 'Accept: application/vnd.github.everest-preview+json' \
+#          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
+#          --data '{"event_type": "ping"}'
+#
+#      - name: Emit repository dispatch event
+#        run: |
+#          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
+#          -H 'Accept: application/vnd.github.everest-preview+json' \
+#          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
+#          --data '{"event_type": "ping"}'

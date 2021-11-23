@@ -8,13 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Emit repository dispatch event
-        run: echo "${{github.event.action}}"
-#        run: |
-#          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
-#          -H 'Accept: application/vnd.github.everest-preview+json' \
-#          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
-#          --data '{"event_type": "ping"}'
-#
+        run: |
+          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
+          --data '{"event_type": "ping"}'
+
 #      - name: Emit repository dispatch event
 #        run: |
 #          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \

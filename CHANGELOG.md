@@ -1,6 +1,5 @@
 ## [3.3.2](https://github.com/AndyKIron/semantic-release-test/compare/v3.3.1...v3.3.2) (2021-11-23)
 
-
 ### Bug Fixes
 
 * update some ([8c48bf4](https://github.com/AndyKIron/semantic-release-test/commit/8c48bf4a6489217c6a6ee8e5405078036d1a7bf4))

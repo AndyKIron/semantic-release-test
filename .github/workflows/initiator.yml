@@ -16,6 +16,7 @@ jobs:
         with:
           owner: ironsource-mobile
           repo: fusion-actions
+          ref: ci/fu-282
           github_token: ${{ secrets.PAT_TOKEN }}
           workflow_file_name: code-validate.yml
 

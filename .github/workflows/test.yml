@@ -2,39 +2,49 @@ name: TEST
 
 on:
   workflow_dispatch:
-  repository_dispatch:
+#  repository_dispatch:
 
 jobs:
   startCI:
     runs-on: ubuntu-latest
     steps:
+      - name: Emit Code Validation
+      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+        with:
+          owner: ironsource-mobile
+          repo: fusion-actions
+          github_user: ${{ secrets.PAT_USERNAME }}
+          github_token: ${{ secrets.PAT_TOKEN }}
+          workflow_file_name: test.yml
+
+
 # ===== CODE-VALIDATE
-      - name: Emit repository dispatch event
-        if: github.event.action == ''
-        run: |
-          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
-          -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
-          --data '{"event_type": "code-validate", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "ref": "${{ github.ref }}" }}'
-
-      - name: On Code validate DONE succesfull
-        if: github.event.action == 'code-validate-done'
-        run: |
-          echo "code-validate done with" && \
-          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
-          -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
-          --data '{"event_type": "publish", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "ref": "${{ github.ref }}" }}'
-
-      - name: On Code validate FAILED
-        if: github.event.action == 'code-validate-failed'
-        run: echo "code-validate failed"
+#      - name: Emit repository dispatch event
+#        if: github.event.action == ''
+#        run: |
+#          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
+#          -H 'Accept: application/vnd.github.everest-preview+json' \
+#          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
+#          --data '{"event_type": "code-validate", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "ref": "${{ github.ref }}" }}'
+#
+#      - name: On Code validate DONE succesfull
+#        if: github.event.action == 'code-validate-done'
+#        run: |
+#          echo "code-validate done with" && \
+#          curl -X POST https://api.github.com/repos/ironsource-mobile/fusion-actions/dispatches \
+#          -H 'Accept: application/vnd.github.everest-preview+json' \
+#          -u ${{secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}} \
+#          --data '{"event_type": "publish", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "ref": "${{ github.ref }}" }}'
+#
+#      - name: On Code validate FAILED
+#        if: github.event.action == 'code-validate-failed'
+#        run: echo "code-validate failed"
 
 # ===== PUBLISH
-      - name: On Publish validate DONE
-        if: github.event.action == 'publish-done'
-        run: echo "code-validate done with '${{ github.event }}'"
-
-      - name: On Publish validate FAILED
-        if: github.event.action == 'publish-failed'
-        run: echo "code-validate failed with '${{ github.event }}'"
+#      - name: On Publish validate DONE
+#        if: github.event.action == 'publish-done'
+#        run: echo "code-validate done with '${{ github.event }}'"
+#
+#      - name: On Publish validate FAILED
+#        if: github.event.action == 'publish-failed'
+#        run: echo "code-validate failed with '${{ github.event }}'"

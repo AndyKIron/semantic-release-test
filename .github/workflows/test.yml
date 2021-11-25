@@ -2,7 +2,7 @@ name: TEST
 
 on:
   workflow_dispatch:
-  repository_dispatch:
+#  repository_dispatch:
 
 jobs:
   startCI:
@@ -13,8 +13,8 @@ jobs:
       - name: Do anything elsee
         run: echo "Pretend to do other things"
 
-      - name: Emit repository dispatch event
-        uses: ironsource-mobile/fusion-actions/.github/workflows/repository-dispatch.yml@main
+#      - name: Emit repository dispatch event
+      - uses: ironsource-mobile/fusion-actions/.github/workflows/repository-dispatch.yml@main
         with:
           owner: ironsource-mobile
           repo: fusion-actions

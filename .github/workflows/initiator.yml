@@ -2,7 +2,7 @@ name: CI-Started
 
 on:
   push:
-    branches-ignore: ['master']
+    branches-ignore: [ 'master' ]
 
   workflow_dispatch:
 
@@ -10,4 +10,19 @@ jobs:
   startCI:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Build Web App
+        run: |
+          echo "Build Web App"
+          sleep 10s
+
+#        - uses: convictional/trigger-workflow-and-wait@v1.3.0
+#          with:
+#            owner: keithweaver
+#            repo: demo-web-api
+#            github_token: ${{ secrets.PAT_TOKEN }}
+#            workflow_file_name: initiator.yml
+#
+#        - name: Deploy Web App
+#          run: |
+#              echo "Dep`loy Web App"
+#              sleep 10s

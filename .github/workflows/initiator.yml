@@ -20,7 +20,7 @@ jobs:
           owner: ironsource-mobile
           repo: fusion-actions
           github_token: ${{ secrets.PAT_TOKEN }}
-          workflow_file_name: initiator.yml
+          workflow_file_name: code-validate.yml
 
       - name: Deploy Web App
         run: |

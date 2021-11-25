@@ -1,0 +1,28 @@
+name: CI-Started
+
+on:
+  push:
+    branches-ignore: [ 'master' ]
+
+  workflow_dispatch:
+
+jobs:
+  startCI:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Validate
+        run: |
+          echo "Validate Code"
+          sleep 100s
+
+#        - uses: convictional/trigger-workflow-and-wait@v1.3.0
+#          with:
+#            owner: keithweaver
+#            repo: demo-web-api
+#            github_token: ${{ secrets.PAT_TOKEN }}
+#            workflow_file_name: initiator.yml
+#
+#        - name: Deploy Web App
+#          run: |
+#              echo "Dep`loy Web App"
+#              sleep 10s

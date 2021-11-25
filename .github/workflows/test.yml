@@ -8,7 +8,7 @@ jobs:
   startCI:
     runs-on: ubuntu-latest
     steps:
-      uses: ironsource-mobile/fusion-actions/.github/workflows/repository-dispatch.yml@main
+      - uses: ironsource-mobile/fusion-actions/.github/workflows/repository-dispatch.yml@main
         with:
           owner: ironsource-mobile
           repo: fusion-actions

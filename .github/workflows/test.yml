@@ -6,22 +6,14 @@ on:
 
 jobs:
   startCI:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Do anything elsee
-        run: echo "Pretend to do other things"
-
-#      - name: Emit repository dispatch event
-      - uses: ironsource-mobile/fusion-actions/.github/workflows/repository-dispatch.yml@main
-        with:
-          owner: ironsource-mobile
-          repo: fusion-actions
-          patUser: ${{secrets.PAT_USERNAME}}
-          patToken: ${{secrets.PAT_TOKEN}}
-          event: code-validate
-          ref: ${{github.ref}}
+    - uses: ironsource-mobile/fusion-actions/.github/workflows/repository-dispatch.yml@main
+      with:
+        owner: ironsource-mobile
+        repo: fusion-actions
+        patUser: ${{secrets.PAT_USERNAME}}
+        patToken: ${{secrets.PAT_TOKEN}}
+        event: code-validate
+        ref: ${{github.ref}}
 
 
 # ===== CODE-VALIDATE

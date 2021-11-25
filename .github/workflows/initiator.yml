@@ -1,0 +1,13 @@
+name: CI-Started
+
+on:
+  push:
+    branches-ignore: ['master']
+
+  workflow_dispatch:
+
+jobs:
+  startCI:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2

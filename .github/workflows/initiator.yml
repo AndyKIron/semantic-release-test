@@ -24,5 +24,5 @@ jobs:
 
       - name: Deploy Web App
         run: |
-            echo "Dep`loy Web App"
+            echo "Deploy Web App"
             sleep 10s

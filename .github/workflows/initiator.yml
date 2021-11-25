@@ -13,7 +13,7 @@ jobs:
       - name: Code Validate
         run: |
           echo "Validate Code"
-          sleep 100s
+          sleep 10s
 
 #        - uses: convictional/trigger-workflow-and-wait@v1.3.0
 #          with:

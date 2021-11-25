@@ -6,7 +6,7 @@ on:
 
 jobs:
   startCI:
-    uses: AndyKIron/emit-repo-dispatch@main
+    uses: AndyKIron/emit-repo-dispatch
     with:
       owner: ironsource-mobile
       repo: fusion-actions

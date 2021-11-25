@@ -2,7 +2,7 @@ name: TEST
 
 on:
   workflow_dispatch:
-#  repository_dispatch:
+  repository_dispatch:
 
 jobs:
   startCI:
@@ -18,6 +18,9 @@ jobs:
 #          event: code-validate
 #          ref: ${{github.ref}}
 
+      - name: Event Information
+        run: |
+          echo "Event '${{ github.event.action }}'"
 
 # ===== CODE-VALIDATE
       - name: Emit repository dispatch event

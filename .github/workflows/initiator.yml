@@ -10,12 +10,7 @@ jobs:
   startCI:
     runs-on: ubuntu-latest
     steps:
-      - name: Code Validate
-        run: |
-          echo "Validate Code"
-          sleep 5s
-
-      - name: Trigger
+      - name: Trigger Code Validate
         uses: AndyKIron/trigger-action-workflow@main
         with:
           owner: ironsource-mobile
@@ -23,7 +18,6 @@ jobs:
           github_token: ${{ secrets.PAT_TOKEN }}
           workflow_file_name: code-validate.yml
 
-      - name: Deploy Web App
+      - name: Done
         run: |
-            echo "Deploy Web App"
-            sleep 10s
+            echo "Workflow Done"

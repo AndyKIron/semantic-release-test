@@ -15,7 +15,7 @@ jobs:
           echo "Validate Code"
           sleep 10s
 
-      - uses: convictional/trigger-workflow-and-wait@master
+      - uses: AndyKIron/trigger-action-workflow@master
         with:
           owner: ironsource-mobile
           repo: fusion-actions

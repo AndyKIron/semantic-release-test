@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Code Validate
-        timeout-minutes: 5
+        timeout-minutes: 6
         uses: AndyKIron/trigger-action-workflow@main
         with:
           owner: ironsource-mobile

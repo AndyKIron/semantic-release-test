@@ -13,7 +13,7 @@ jobs:
       - name: Code Validate
         run: |
           echo "Validate Code"
-          sleep 10s
+          sleep 5s
 
       - name: Trigger
         uses: AndyKIron/trigger-action-workflow@main

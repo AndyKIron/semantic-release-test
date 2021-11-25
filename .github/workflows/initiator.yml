@@ -15,14 +15,14 @@ jobs:
           echo "Validate Code"
           sleep 10s
 
-        - uses: convictional/trigger-workflow-and-wait@master
-          with:
-            owner: ironsource-mobile
-            repo: fusion-actions
-            github_token: ${{ secrets.PAT_TOKEN }}
-            workflow_file_name: initiator.yml
+      - uses: convictional/trigger-workflow-and-wait@master
+        with:
+          owner: ironsource-mobile
+          repo: fusion-actions
+          github_token: ${{ secrets.PAT_TOKEN }}
+          workflow_file_name: initiator.yml
 
-        - name: Deploy Web App
-          run: |
-              echo "Dep`loy Web App"
-              sleep 10s
+      - name: Deploy Web App
+        run: |
+            echo "Dep`loy Web App"
+            sleep 10s

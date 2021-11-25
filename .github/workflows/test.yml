@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Emit Code Validation
-      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+        uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
           owner: ironsource-mobile
           repo: fusion-actions

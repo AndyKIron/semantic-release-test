@@ -7,14 +7,16 @@ on:
 jobs:
   startCI:
     runs-on: ubuntu-latest
-    - uses: ironsource-mobile/fusion-actions/.github/workflows/repository-dispatch.yml@main
-      with:
-        owner: ironsource-mobile
-        repo: fusion-actions
-        patUser: ${{secrets.PAT_USERNAME}}
-        patToken: ${{secrets.PAT_TOKEN}}
-        event: code-validate
-        ref: ${{github.ref}}
+    steps:
+      - name: Emit repository dispatch event
+        uses: ironsource-mobile/fusion-actions/.github/workflows/repository-dispatch.yml@main
+        with:
+          owner: ironsource-mobile
+          repo: fusion-actions
+          patUser: ${{secrets.PAT_USERNAME}}
+          patToken: ${{secrets.PAT_TOKEN}}
+          event: code-validate
+          ref: ${{github.ref}}
 
 
 # ===== CODE-VALIDATE

@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test Call
-        uses: AndyKIron/emit-repo-dispatch@main
+        uses: ironsource-mobile/emit-repo-dispatch@main
         with:
           owner: ironsource-mobile
           repo: fusion-actions

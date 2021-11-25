@@ -6,14 +6,17 @@ on:
 
 jobs:
   startCI:
-    uses: AndyKIron/emit-repo-dispatch
-    with:
-      owner: ironsource-mobile
-      repo: fusion-actions
-      patUser: ${{secrets.PAT_USERNAME}}
-      patToken: ${{secrets.PAT_TOKEN}}
-      event: code-validate
-      ref: ${{github.ref}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Call
+        uses: AndyKIron/emit-repo-dispatch@main
+        with:
+          owner: ironsource-mobile
+          repo: fusion-actions
+          patUser: ${{secrets.PAT_USERNAME}}
+          patToken: ${{secrets.PAT_TOKEN}}
+          event: code-validate
+          ref: ${{github.ref}}
 
 
 # ===== CODE-VALIDATE

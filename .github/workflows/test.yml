@@ -2,26 +2,11 @@ name: TEST
 
 on:
   workflow_dispatch:
-  repository_dispatch:
 
 jobs:
   startCI:
     runs-on: ubuntu-latest
     steps:
-#      - name: Test Call
-#        uses: ironsource-mobile/emit-repo-dispatch@main
-#        with:
-#          owner: ironsource-mobile
-#          repo: fusion-actions
-#          patUser: ${{secrets.PAT_USERNAME}}
-#          patToken: ${{secrets.PAT_TOKEN}}
-#          event: code-validate
-#          ref: ${{github.ref}}
-
-      - name: Event Information
-        run: |
-          echo "Event '${{ github.event.action }}' with result - ${{github.event.client_payload.result}}"
-
 # ===== CODE-VALIDATE
       - name: Emit repository dispatch event
         if: github.event.action == ''

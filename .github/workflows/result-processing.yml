@@ -1,0 +1,16 @@
+name: TEST
+
+on:
+  repository_dispatch:
+      type:
+        - code-validate-result
+
+jobs:
+  responder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Information
+        run: |
+          echo "Event '${{ github.event.action }}' with result - ${{github.event.client_payload.result}}"
+
+

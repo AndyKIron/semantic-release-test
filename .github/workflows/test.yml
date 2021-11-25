@@ -20,7 +20,7 @@ jobs:
 
       - name: Event Information
         run: |
-          echo "Event '${{ github.event.action }}'"
+          echo "Event '${{ github.event.action }}' with result - ${{github.event.client_payload.result}}"
 
 # ===== CODE-VALIDATE
       - name: Emit repository dispatch event

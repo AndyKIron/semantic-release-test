@@ -15,7 +15,8 @@ jobs:
           echo "Validate Code"
           sleep 10s
 
-      - uses: AndyKIron/trigger-action-workflow@main
+      - name: Trigger
+        uses: AndyKIron/trigger-action-workflow@main
         with:
           owner: ironsource-mobile
           repo: fusion-actions

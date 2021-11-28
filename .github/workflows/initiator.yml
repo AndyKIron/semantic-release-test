@@ -10,15 +10,16 @@ jobs:
   startCI:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Code Validate
-        timeout-minutes: 6
-        uses: AndyKIron/trigger-action-workflow@main
-        with:
-          owner: ironsource-mobile
-          repo: fusion-actions
-          ref: ci/fu-282
-          github_token: ${{ secrets.PAT_TOKEN }}
-          workflow_file_name: code-validate.yml
+      - run: echo "${GITHUB_REF#refs/heads/}"
+#      - name: Trigger Code Validate
+#        timeout-minutes: 6
+#        uses: AndyKIron/trigger-action-workflow@main
+#        with:
+#          owner: ironsource-mobile
+#          repo: fusion-actions
+#          ref: $(echo ${GITHUB_REF#refs/heads/})
+#          github_token: ${{ secrets.PAT_TOKEN }}
+#          workflow_file_name: code-validate.yml
 
       - name: Done
         run: |
